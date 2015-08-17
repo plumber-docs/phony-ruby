@@ -2,10 +2,9 @@
 
 Dockerfile: ruby:2.2.2
 
+`gem install phony`
 
 # Example
-
-`gem install phony`
 
 `ruby -e "require('phony'); puts Phony.normalize('1 (703) 451-5115')"`
 

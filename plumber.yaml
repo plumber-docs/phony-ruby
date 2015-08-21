@@ -1,0 +1,22 @@
+---
+docker_image: ruby:2.2.2
+examples: 
+  - name: Installation
+    steps:
+      - >
+        {{run_on_command_line 'gem install phony'}}
+
+  - name: Normalize a phone number
+    requires: ['Installation']
+    steps:
+      - > 
+        {{run_in_ruby "require('phony'); Phony.normalize('1 (703) 451-5115')"}}
+    expected_result: 17034515115
+
+  - name: Format a phone number
+    requires: ['Installation']
+    steps:
+      - >
+       {{run_in_ruby "require('phony'); Phony.format('41443643532')"}}
+
+    expected_result: +41 44 364 35 32

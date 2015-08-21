@@ -1,6 +1,6 @@
 # Installation
 
-Dockerfile: ruby:2.2.2
+From Dockerfile: ruby:2.2.2
 
 `gem install phony`
 
